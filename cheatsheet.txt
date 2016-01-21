@@ -1,0 +1,49 @@
+Terminal Commands
+
+ls <directory name>:  List contents of a directory
+cd: Go home.
+cd <directory name>:  Change directory
+cd ..: Go up
+cat <file name>: View the contents of a file
+mkdir <folder name>: Make a new empty folder
+rmdir <folder name>: Deletes a folder, the folder must be empty
+gedit <file name> &: Creates a file if there is not a file with the same name, otherwise opens the file with that name.
+python -m SimpleHTTPServer - Start the development server
+Git Commands
+
+git clone --config="http.proxy=http://walter2645:Boobless69@192.168.2.1:8080" https://github.com/walter2645-cmis/walter2645-cmis-wd.git
+git add <file name>: adds file for commits
+git commit -m "Commit Comment": commits files for push
+git push: saves files to github
+
+sftp Commands
+
+sftp walter2645@cmis-hsteacher - go to production server
+ls - Lists contents of current directory
+pwd - view current folder directory
+mkdir <folder name>: Make a new empty folder
+rmdir <folder name>: Deletes a folder, the folder must be empty
+put ! in front of the commands above to execute it on the directory (folder) you entered sftp in
+cd - go home
+put <filename> - upload a file to production server
+rm <filename> - remove a file from production server
+put * - upload all files to production server
+rm * - remove all file from production server
+get <filename> - upload a file
+
+Browser Links
+http://cmis-hsteacher/~walter2645/ - view production server content
+localhost:8000 view content of local server
+
+finals notes
+outline: dotted red 1px
+main margin-left is 1px wider than nav pixel value
+float (apply to element on top) valuesL: left or right
+img {
+ is image selector
+}
+footer {
+	clear:both; (or only left/right)
+}
+<br> (br is line divider)
+ class="clear" put in element to make it unique for css declarations.
