@@ -47,3 +47,12 @@ footer {
 }
 <br> (br is line divider)
  class="clear" put in element to make it unique for css declarations.
+
+python functions
+str() - converts into string
+int() - converts into integer
+float() - converts into float (decimal)
+round() - rounds up number to integer, but converts into float
+len() - finds number of characers including spaces
+dir() - shows list of functions you can apply to ()
+help() - shows what () can do or does
