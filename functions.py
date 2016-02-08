@@ -51,6 +51,4 @@ def center(word):
     return x*" " + word + x*" "
 def msg_box(word):
     s = len(word)
-    return "+--" + s*"-" + "--+"
-        "|  " + word + "  |"
-        "+--" + s*"-" + "--+"
+    return "+--" + s*"-" + "--+\n" + "|  " + word + "  |\n" + "+--" + s*"-" + "--+"
