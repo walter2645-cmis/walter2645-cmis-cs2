@@ -8,4 +8,9 @@ def hypotenuseofrighttriangle():
     y = int(raw_input("How many units long is the other side of the right triangle?\n"))
     unit = raw_input("What is the unit of measurement?\n")
     return "The hypotenuse of the right triangle is " + str(math.sqrt((x * x) + (y * y))) + unit + "(s) long."
-print hypotenuseofrighttriangle()
+def runboth():
+    a = str(circlecircumference())
+    b = str(hypotenuseofrighttriangle())
+    c = a + "\n" + b
+    return c
+print runboth()
