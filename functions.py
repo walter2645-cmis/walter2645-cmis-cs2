@@ -54,27 +54,27 @@ fnc21 = center("Computer")
 fnc22 = center("Science")
 fnc23 = msg_box("CATS")
 fnc24 = msg_box("Grumpy cat")
-print msg_box(str(fnc1))#the result of add is(context, add into string output)
-print msg_box(str(fnc2))
-print msg_box(str(fnc3))
-print msg_box(str(fnc4))
-print msg_box(str(fnc5))
-print msg_box(str(fnc6))
-print msg_box(str(fnc7))
-print msg_box(str(fnc8))
-print msg_box(str(fnc9))
-print msg_box(str(fnc10))
-print msg_box(str(fnc11))
-print msg_box(str(fnc12))
-print msg_box(str(fnc13))
-print msg_box(str(fnc14))
-print msg_box(str(fnc15))
-print msg_box(str(fnc16))
-print msg_box(str(fnc17))
-print msg_box(str(fnc18))
-print fnc19
-print fnc20
-print fnc21
-print fnc22
-print fnc23
-print fnc24
+print msg_box("The result of add is " + str(fnc1))
+print msg_box("The result of add is " + str(fnc2))
+print msg_box("The result of sub is " + str(fnc3))
+print msg_box("The result of sub is " + str(fnc4))
+print msg_box("The result of mul is " + str(fnc5))
+print msg_box("The result of mul is " + str(fnc6))
+print msg_box("The result of div is " + str(fnc7))
+print msg_box("The result of div is " + str(fnc8))
+print msg_box("The result of hours_from_seconds is " + str(fnc9))
+print msg_box("The result of hours_from_seconds is " + str(fnc10))
+print msg_box("The result of circle_area is " + str(fnc11))
+print msg_box("The result of circle_area is " + str(fnc12))
+print msg_box("The result of sphere_volume is " + str(fnc13))
+print msg_box("The result of sphere_volume is " + str(fnc14))
+print msg_box("The result of avg_volume is " + str(fnc15))
+print msg_box("The result of avg_volume is " + str(fnc16))
+print msg_box("The result of area is " + str(fnc17))
+print msg_box("The result of area is " + str(fnc18))
+print fnc19 + "\nis right aligned"
+print fnc20 + "\nis right aligned"
+print fnc21 + "\nis centered"
+print fnc22 + "\nis centered"
+print fnc23 + " is in a message box"
+print fnc24 + " is in a message box"
