@@ -10,13 +10,13 @@ def div(a, b):
 def hours_from_seconds(a):
     return a / 3600
 def circle_area(a):
-    return a * a * math.pi
+    return a ** 2 * math.pi
 def sphere_volume(a):
-    return a * a * a * 4.0/3 * math.pi
+    return a ** 3 * 4.0/3 * math.pi
 def avg_volume(a, b):
     c = a/2
     d = b/2
-    return (c * c * c * 4.0/3 * math.pi + d * d * d * 4.0/3 * math.pi) / 2
+    return (sphere_volume(c) + sphere_volume(d)) / 2
 def area(a, b, c):
     p = (a + b + c)/2.0
     return math.sqrt(p * (p - a) * (p - b) * (p - c))
