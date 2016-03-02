@@ -22,7 +22,7 @@ def main():
     z = hypotenuse(x, y)
     b = circumference(a)
 
-    #Output
+    #Output Section
     res = output(name, x, y, z, a, b)
     print res
 main()
