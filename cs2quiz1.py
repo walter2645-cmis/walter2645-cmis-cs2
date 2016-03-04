@@ -1,3 +1,5 @@
+# 13.5 pts of 15 for terminology
+# 20 pts of 25 for programming
 #Part 1: Terminology (15 points)
 #1 1pt) What is the symbol "=" used for?
 # assigning values, function calls to a variable
@@ -45,18 +47,18 @@
 
 # Hint: Radius is the square root of the area divided by pi
 import math
-#1 pt for header line 1 pt
-#3 pt for correct formula 1 pt
-#1 pt for return value 1 pt
+#1 pt for header line 1 pt correct
+#3 pt for correct formula 3 pt correct
+#1 pt for return value 1 pt correct
 #1 pt for parameter name 0 pt put x instead of area
-#1 pt for function name 1 pt
+#1 pt for function name 1 pt correct
 def diameterfromarea(x):
     return math.sqrt(x/math.pi)*2
-#1pt for header line 1 pt
-#1pt for parameter names 1 pt
-#1pt for return value 1 pt
-#1pt for correct output format 1 pt
-#3pt for correct use of format function 1 3 pts
+#1pt for header line 1 pt correct
+#1pt for parameter names 1 pt correct
+#1pt for return value 1 pt correct
+#1pt for correct output format 1 pt correct
+#3pt for correct use of format function 3 pts correct
 def output(c1, c2, c3, total):
     out = """
 Circle  Diameter
@@ -66,12 +68,12 @@ c3      {}
 Totals  {}
 """.format(c1, c2, c3, total)
     return out
-#1pt header line 1 pt
-#1pt getting input 1 pt
-#1pt converting input 1 pt
-#1pt for calling output function 1 pt
-#2pt for correct diameter formula 2 pts
-#1pt for variable names 0 pt
+#1pt header line 1 pt correct
+#1pt getting input 1 pt got input
+#1pt converting input 1 pt converted input
+#1pt for calling output function 1 pt called output
+#2pt for correct diameter formula 2 pts correct
+#1pt for variable names 0 pt used single letter variable names
 def main():
     #Input Section
     a = float(raw_input("Area of C1: "))
@@ -87,8 +89,8 @@ def main():
     #Output Section
     res = output(c1, c2, c3, total)
     print res
-#1pt for calling main 1 pt
+#1pt for calling main 1 pt main called
 main()
-#1pt explanatory comments 1 pt
-#1pt code format 1 pt
-
+#1pt explanatory comments 1 pt added explanatory comments
+#1pt code format 1 pt code format correct
+#1pt script runs without errors 1 pt script runs no errors
