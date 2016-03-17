@@ -1,5 +1,5 @@
 # 13.5 pts of 15 for terminology
-# 20 pts of 25 for programming
+# 23 pts of 25 for programming
 #Part 1: Terminology (15 points)
 #1 1pt) What is the symbol "=" used for?
 # assigning values, function calls to a variable
