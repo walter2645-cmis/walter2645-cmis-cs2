@@ -32,7 +32,7 @@ def printer(printorder):
     elif printorder == 11:
         print "You decide not to open the box and continue travelling."
     elif printorder == 12:
-        print
+        print "You encounter a strange humanoid robot in your way. It says that you must answer three random math questions in order to progress. If you answer wrong, the question may change."
     elif printorder == 13:
         print
     elif printorder == 14:
@@ -74,6 +74,8 @@ def mysteryboxq(decision):
         mysterybox()
     else:
         printer(11)
+def mathquestions():
+    printer(12)
 def main():
     printer(1)
     legal = raw_input("Greetings, Traveler.\nAre you under the age of 18? ")
@@ -85,6 +87,7 @@ def main():
     mazeloop(maze)
     printer(7)
     decision = raw_input("Do you wish to open it? ")
-    mysteryboxq()
+    mysteryboxq(decision)
+    mathquestions()
     #numbers >>random.randint next.
 main()
