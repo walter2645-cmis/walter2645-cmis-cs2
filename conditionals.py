@@ -32,7 +32,7 @@ def printer(printorder):
     elif printorder == 11:
         print "You decide not to open the box and continue travelling."
     elif printorder == 12:
-        print "You encounter a strange humanoid robot in your way. It says that you must answer three random math questions in order to progress. If you answer wrong, the question may change."
+        print "You encounter a strange humanoid robot in your way. It tells you that you must answer a random math question in order to progress. If you answer wrong, the question may change."
     elif printorder == 13:
         print
     elif printorder == 14:
@@ -74,8 +74,32 @@ def mysteryboxq(decision):
         mysterybox()
     else:
         printer(11)
-def mathquestions():
-    printer(12)
+def q1(answer):
+    if answer == 7:
+    else:
+def q2(answer):
+    if answer == 169:
+    else:
+def q3(answer):
+    if answer == 11111:
+    else:
+def q4(answer):
+    if answer == 9:
+    else:
+def q5(answer):
+    if answer == 288:
+    else:
+def mathquestions(qnumber):
+    if qnumber == 1:
+        q1(int(raw_input("1+2*3 = ? ")))
+    elif qnumber == 2:
+        q2(int(raw_input("13*13 = ? ")))
+    elif qnumber == 3:
+        q3(int(raw_input("12345-1234 = ? ")))
+    elif qnumber == 4:
+        q4(int(raw_input("8-1*0+2/2 = ? ")))
+    elif qnumber == 5:
+        q5(int(raw_input("48/2(9+3) = ? ")))
 def main():
     printer(1)
     legal = raw_input("Greetings, Traveler.\nAre you under the age of 18? ")
@@ -88,6 +112,8 @@ def main():
     printer(7)
     decision = raw_input("Do you wish to open it? ")
     mysteryboxq(decision)
-    mathquestions()
+    printer(12)
+    randquestion = random.randint(1, 5)
+    mathquestions(randquestion)
     #numbers >>random.randint next.
 main()
