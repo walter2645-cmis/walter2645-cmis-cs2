@@ -1,11 +1,16 @@
 import random
+import time
 #You are playing an antique RPG game.
 #You are asked for your age. returns a message depending on whether player is over 18.
 #You are asked if you want to read an introduction to the game.
 #If you choose yes, it will print out a brief introduction.
 #You encounter a maze. You are given an option to attempt it or do not.
 #If you attempt it, it will loop back to the start of the maze until you choose not to attempt it.
+#You encounter a mystery box that may grant you wishes, based on the probability that random.random comes up greater than 0.9999999
+#If you do get the wishes, it will ask you for the wishes you wish to be granted.
+#You are stopped by a robot that makes you answer 1 out of 5 math questions, until you get it right. The question is chosen at random using random.randint.
 #
+starttime = time.time()
 def ansprocess(answer):
     return bool(answer)
 def printer(printorder):
@@ -32,9 +37,9 @@ def printer(printorder):
     elif printorder == 11:
         print "You decide not to open the box and continue travelling."
     elif printorder == 12:
-        print "You encounter a strange humanoid robot in your way. It tells you that you must answer a random math question in order to progress. If you answer wrong, the question may change."
+        print "You encounter a strange humanoid robot in your way. It tells you that you must answer a random math question in order to progress. If you answer wrong, the question may change. You MUST type a number to answer the question."
     elif printorder == 13:
-        print
+        print "You have answered correctly. You may proceed."
     elif printorder == 14:
         print
     elif printorder == 15:
@@ -76,19 +81,34 @@ def mysteryboxq(decision):
         printer(11)
 def q1(answer):
     if answer == 7:
+        printer(13)
     else:
+        randquestion = random.randint(1, 5)
+        mathquestions(randquestion)
 def q2(answer):
     if answer == 169:
+        printer(13)
     else:
+        randquestion = random.randint(1, 5)
+        mathquestions(randquestion)
 def q3(answer):
     if answer == 11111:
+        printer(13)
     else:
+        randquestion = random.randint(1, 5)
+        mathquestions(randquestion)
 def q4(answer):
     if answer == 9:
+        printer(13)
     else:
+        randquestion = random.randint(1, 5)
+        mathquestions(randquestion)
 def q5(answer):
     if answer == 288:
+        printer(13)
     else:
+        randquestion = random.randint(1, 5)
+        mathquestions(randquestion)
 def mathquestions(qnumber):
     if qnumber == 1:
         q1(int(raw_input("1+2*3 = ? ")))
@@ -100,6 +120,8 @@ def mathquestions(qnumber):
         q4(int(raw_input("8-1*0+2/2 = ? ")))
     elif qnumber == 5:
         q5(int(raw_input("48/2(9+3) = ? ")))
+def timepassed(start, end):
+    return end - start
 def main():
     printer(1)
     legal = raw_input("Greetings, Traveler.\nAre you under the age of 18? ")
@@ -115,5 +137,10 @@ def main():
     printer(12)
     randquestion = random.randint(1, 5)
     mathquestions(randquestion)
-    #numbers >>random.randint next.
+    #modify questions to net out "no"s and any answer but int or float
+    
+    endtime = time.time()
+    gametime = timepassed(starttime, endtime)
+    print gametime
+    #in testing, put into output function
 main()
