@@ -122,6 +122,11 @@ def mathquestions(qnumber):
         q5(int(raw_input("48/2(9+3) = ? ")))
 def timepassed(start, end):
     return end - start
+def output(timepassed):
+    out = """
+You took {} seconds to get through the game
+""".format(timepassed)
+    return out
 def main():
     printer(1)
     legal = raw_input("Greetings, Traveler.\nAre you under the age of 18? ")
@@ -140,7 +145,8 @@ def main():
     #modify questions to net out "no"s and any answer but int or float
     
     endtime = time.time()
-    gametime = timepassed(starttime, endtime)
+    timepassed = endtime - starttime
+    gametime = output(timepassed)
     print gametime
     #in testing, put into output function
 main()
