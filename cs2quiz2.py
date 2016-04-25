@@ -3,16 +3,16 @@
 #a) 1 == 1
 #b) 2 >= 3
 #c) "Hello" != "bye"
-#
+# 3 points
 #2) What does 'return' do?
 # returns some form of output from a function
-#
+# 0 points
 #
 #
 #3) What are 2 ways indentation is important in python code?
 #a) clearly separates different parts of code
 #b) tells us what code is in what function
-#
+# 1 points
 #
 
 #PART 2: Reading
@@ -22,22 +22,22 @@
 #problem1_b)negative the square root of 3
 #problem1_c) 0
 #problem1_d) -5
-#
+# 4 points
 #problem2_a) True
 #problem2_b) False
 #problem2_c) False
 #problem2_d) False
-#
+# 3 points
 #problem3_a) 0.3
 #problem3_b) 0.5
 #problem3_c) 0.5
 #problem3_d) 0.5
-#
+# 4 points
 #problem4_a) 24
 #problem4_b) 6
 #problem4_c) 1.5
 #problem4_d) 5
-#
+# 4 points
 
 #PART 3: Programming
 #Write a script that asks the user to type in 3 different numbers.
@@ -78,3 +78,16 @@ def main():
     #Output Section
     print res
 main()
+
+# +1 correct function headers (ALL MUST BE CORRECT) +1
+# +1 correctly structured script: 
+#	 (main function defined, process functions defined, process functions called +1
+#     in main, calls main)
+# +1 use if...elif...else or an equivalent structure +1
+# +1 uses a boolean expression to test numbers +1
+# +1 CORRECTLY determines and returns largest number +1
+# +1 uses if...else or an equivalent structure +1
+# +1 uses a boolean expression to test equality +1
+# +1 CORRECTLY determines and returns if the numbers are all different +1
+# +1 gets and converts 3 values correctly +1
+# +1 uses conditional to give feedback if numbers are not all different +1
