@@ -44,7 +44,7 @@ def biggest(inp, num):
     elif num == None:
         num = raw_input("Next number: ")
         return biggest(num, num)
-    elif float(inp) > num:
+    elif float(inp) > float(num):
         num = float(inp)
         inp = raw_input("Next number: ")
         return biggest(inp, num)
@@ -54,4 +54,28 @@ def biggest(inp, num):
 def biggestout():
     res = biggest(0, None)
     print "The biggest number is " + str(res)
-biggestout()
+def smallest(inp, num):
+    if inp == "" or num == "":
+        return num
+    elif num == None:
+        num = raw_input("Next number: ")
+        return smallest(num, num)
+    elif float(inp) < float(num):
+        num = float(inp)
+        inp = raw_input("Next number: ")
+        return smallest(inp, num)
+    else:
+        inp = raw_input("Next number: ")
+        return smallest(inp, num)
+def smallestout():
+    res = smallest(0, None)
+    print "The smallest number is " + str(res)
+def power(x, n):
+    if n == 0:
+        return x
+    else:
+        return power(x, n)
+def powerout():
+    res = power(2, 3)
+    print res
+powerout()
