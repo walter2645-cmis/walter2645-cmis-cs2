@@ -71,11 +71,12 @@ def smallestout():
     res = smallest(0, None)
     print "The smallest number is " + str(res)
 def power(x, n):
-    if n == 0:
+    if n == 1:
         return x
+# IMPORTANT!!!
     else:
-        return power(x, n)
+        return x * power(x, n)
 def powerout():
-    res = power(2, 3)
+    res = power(2, 5)
     print res
 powerout()
