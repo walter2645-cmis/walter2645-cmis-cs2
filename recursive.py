@@ -1,6 +1,8 @@
 def countdown(n):
     if n <= 0:
         print "Blastoff!"
+#Lines 2 and 3 are called the "Base Case"
+#The other cases where it calls itself is called the "Recursive Case"
     else: 
         print n
         countdown(n-1)
@@ -28,16 +30,17 @@ def counts():
     countdownfrom(10, 3)
     countupfrom(0, 13)
     pass
-def adder(inp, total):
+def adder(total):
+    inp = raw_input("Running total: " + str(total) + "\nNext number: ")
     if inp == "":
         return total
     else:
         total += float(inp)
-        inp = raw_input("Running total: " + str(total) + "\nNext number: ")
-        return adder(inp, total)
+        return adder(total)
 def adderout():
-    res = adder(0, 0)
+    res = adder(0)
     print "The sum is " + str(res)
+adderout()
 def biggest(inp, num):
     if inp == "" or num == "":
         return num
@@ -75,7 +78,7 @@ def power(x, n):
         return x
 # IMPORTANT!!!
     else:
-        return x * power(x, n)
+        return x * power(x, n - 1)
 def powerout():
     res = power(2, 5)
     print res
