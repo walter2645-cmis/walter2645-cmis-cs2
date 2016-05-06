@@ -4,14 +4,14 @@ def rounds(roundnum, c):
         return "You got " + str(c) + " rounds correct."
     else:
         print "Starting round " + str(roundnum)
-        c += guess(random.randint(1, 100), 4)
+        c += guess(random.randint(1, 100), 5)
         return rounds(roundnum - 1, c)
 def guess(randnum, attempts):
     inp = int(raw_input("Guess a number: "))
     if inp == randnum:
         print "That's correct!\n"
         return 1
-    elif attempts == 0:
+    elif attempts == 1:
         print "The answer was " + str(randnum) + ". You must not be very good at this game.\n"
         return 0
     elif inp > randnum:
