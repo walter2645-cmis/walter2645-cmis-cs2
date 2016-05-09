@@ -40,18 +40,8 @@ def printer(printorder):
         print "You encounter a strange humanoid robot in your way. It tells you that you must answer a random math question in order to progress. If you answer wrong, the question may change. You MUST type a number to answer the question."
     elif printorder == 13:
         print "You have answered correctly. You may proceed."
-    elif printorder == 14:
-        print
-    elif printorder == 15:
-        print
-    elif printorder == 16:
-        print
-    elif printorder == 17:
-        print
-    elif printorder == 18:
-        print
 def legalage(legal):
-    if ansprocess(legal):
+    if not ansprocess(legal):
         printer(2)
 def introduction(intro):
     if ansprocess(intro):
@@ -63,20 +53,18 @@ def mazeloop(maze):
         mazeloop(maze)
     else:
         printer(6)
-def wishes(wish1, wish2, wish3):
-    printer(10)
 def mysterybox():
-    if random.random() >= 0.9999999:
+    if random.random() >= 0.8 and 0.8 <= random.random():
         printer(8)
         wish1 = raw_input("What is your first wish? ")
         wish2 = raw_input("What is your second wish? ")
         wish3 = raw_input("What is your third wish? ")
-        wishes(wish1, wish2, wish3)
+        printer(10)
     else:
         printer(9)
 def mysteryboxq(decision):
     if ansprocess(decision):
-        mysterybox()
+        return mysterybox()
     else:
         printer(11)
 def q1(answer):
@@ -104,7 +92,7 @@ def q4(answer):
         randquestion = random.randint(1, 5)
         mathquestions(randquestion)
 def q5(answer):
-    if answer == 288:
+    if answer == 288 or answer == 2:
         printer(13)
     else:
         randquestion = random.randint(1, 5)
@@ -122,14 +110,14 @@ def mathquestions(qnumber):
         q5(int(raw_input("48/2(9+3) = ? ")))
 def timepassed(start, end):
     return end - start
-def output(timepassed):
+def timer(timepassed):
     out = """
 You took {} seconds to get through the game
 """.format(timepassed)
     return out
 def main():
     printer(1)
-    legal = raw_input("Greetings, Traveler.\nAre you under the age of 18? ")
+    legal = raw_input("Greetings, Traveler.\nAre you over the age of 18? ")
     legalage(legal)
     intro = raw_input("Do you wish to read an introduction to the game? ")
     introduction(intro)
@@ -138,15 +126,12 @@ def main():
     mazeloop(maze)
     printer(7)
     decision = raw_input("Do you wish to open it? ")
-    mysteryboxq(decision)
+    wishes = mysteryboxq(decision)
     printer(12)
     randquestion = random.randint(1, 5)
     mathquestions(randquestion)
-    #modify questions to net out "no"s and any answer but int or float
-    
     endtime = time.time()
-    timepassed = endtime - starttime
-    gametime = output(timepassed)
+    timeres = timepassed(starttime, endtime)
+    gametime = timer(timeres)
     print gametime
-    #in testing, put into output function
 main()
