@@ -1,7 +1,7 @@
 import random
 def rounds(roundnum, myscore, compscore):
     if roundnum == 0:
-        return "You got " + str(c) + " rounds correct."
+        return "You got " + str(myscore) + " rounds correct. I got " + str(compscore) + " rounds correct."
     else:
         print "Starting round " + str(roundnum)
         myscore += guess(random.randint(1, 100), 5)
@@ -22,7 +22,10 @@ def guess(randnum, attempts):
         print "Thats too low."
         return guess(randnum, attempts - 1)
 def compguess(bot, top, attempts):
-    theguess = (top - bot) / 2 + bot
+    if attempts == 1:
+        theguess = random.randint(bot, top)
+    else:
+        theguess = (top - bot) / 2 + bot
     print "I guess " + str(theguess) + "."
     judgement = raw_input("too (h)igh, too (l)ow, or (c)orrect: ")
     if judgement == "c":
@@ -38,6 +41,6 @@ def compguess(bot, top, attempts):
         bot = theguess
         return compguess(bot, top, attempts - 1)
 def main():
-    res = rounds(1, 0)
+    res = rounds(1, 0, 0)
     print res
 main()
