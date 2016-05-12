@@ -1,11 +1,12 @@
 import random
-def rounds(roundnum, c):
+def rounds(roundnum, myscore, compscore):
     if roundnum == 0:
         return "You got " + str(c) + " rounds correct."
     else:
         print "Starting round " + str(roundnum)
-        c += guess(random.randint(1, 100), 5)
-        return rounds(roundnum - 1, c)
+        myscore += guess(random.randint(1, 100), 5)
+        compscore += compguess(1, 100, 5)
+        return rounds(roundnum - 1, myscore, compscore)
 def guess(randnum, attempts):
     inp = int(raw_input("Guess a number: "))
     if inp == randnum:
@@ -20,6 +21,22 @@ def guess(randnum, attempts):
     elif inp < randnum:
         print "Thats too low."
         return guess(randnum, attempts - 1)
+def compguess(bot, top, attempts):
+    theguess = (top - bot) / 2 + bot
+    print "I guess " + str(theguess) + "."
+    judgement = raw_input("too (h)igh, too (l)ow, or (c)orrect: ")
+    if judgement == "c":
+        print "I'm awesome!"
+        return 1
+    elif attempts == 1:
+        print "I must not be very good at this game."
+        return 0
+    elif judgement == "h":
+        top = theguess
+        return compguess(bot, top, attempts - 1)
+    elif judgement == "l":
+        bot = theguess
+        return compguess(bot, top, attempts - 1)
 def main():
     res = rounds(1, 0)
     print res
