@@ -66,12 +66,3 @@ def main():
     res = averageofodds(0, 0)
     print "The average of your odd numbers was " + str(res) + "."
 main()
-
-
-
-
-
-
-
-
-
