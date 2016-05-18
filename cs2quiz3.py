@@ -56,11 +56,11 @@ def averageofodds(avg, num):
         else:
             return float(num) / avg
 #RECURSIVE CASE(S)
-    elif int(inp) % 2 == 1:
+    elif float(inp) % 2 == 1:
         avg += 1
         num += int(inp)
         return averageofodds(avg, num)
-    elif int(inp) % 2 == 0:
+    else:
         return averageofodds(avg, num)
 def main():
     res = averageofodds(0, 0)
