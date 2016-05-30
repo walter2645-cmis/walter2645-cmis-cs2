@@ -46,5 +46,45 @@ def sumofodds(n):
         else:
             n -= 1
     return total
-print sumofodds(10)
-print sumofodds(-35)
+#print sumofodds(10)
+#print sumofodds(-35)
+def grid(w, h):
+    row = ""
+    stasis = w
+    while h > 0:
+        w = stasis
+        while w > 0:
+            row += "."
+            w -= 1
+        row += "\n"
+        h -= 1
+    return row
+print grid(10, 10)
+print grid(4, 5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
